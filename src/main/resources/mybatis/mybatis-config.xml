@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--指定properties文件的位置，从类路径根开始找文件-->
+    <properties resource="db.properties"/>
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <!--定义别名-->
+    <typeAliases>
+        <package name="com.xiayuhu.ssm.Library_Management_System.entity"/>
+    </typeAliases>
+    <!--配置插件-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+        </plugin>
+    </plugins>
+    <mappers>
+        <!-- <mapper resource="org/example/dao/StudentDao.xml"/>-->
+        <!--第一种方式：指定多个mapper文件-->
+        <!--<mapper resource=""-->
+        <!--第二种方式：使用包名
+        name：xml文件（mapper文件）所在的包名,这个包中所有xml文件一次都能加载给mybatis
+        使用package的要求
+        1.mapper文件名称需要和接口名称一样，区分大小
+        2.mapper文件和dao接口需要在同一目录
+        -->
+        <package name="org.example.dao"/>
+
+    </mappers>
+</configuration>
