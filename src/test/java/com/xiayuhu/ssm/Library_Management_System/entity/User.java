@@ -1,9 +1,12 @@
-package java.com.xiayuhu.ssm.Library_Management_System.entity;
+package com.xiayuhu.ssm.Library_Management_System.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class User {
+public class User implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Integer userId;
 
     private String userName;
