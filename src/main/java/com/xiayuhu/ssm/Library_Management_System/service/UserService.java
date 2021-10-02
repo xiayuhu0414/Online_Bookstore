@@ -5,5 +5,5 @@ import com.xiayuhu.ssm.Library_Management_System.entity.User;
 import java.util.List;
 
 public interface UserService {
-    List<User> listUser();
+    public List<User> listUser();
 }
