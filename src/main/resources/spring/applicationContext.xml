@@ -38,28 +38,28 @@
         <property name="basePackage" value="com.xiayuhu.ssm.Library_Management_System.dao"/>
     </bean>
 
-    <!--&lt;!&ndash; 配置事务管理器 &ndash;&gt;
+    <!-- 配置事务管理器 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        &lt;!&ndash; 指定数据源 &ndash;&gt;
+        <!-- 指定数据源 -->
         <property name="dataSource" ref="dataSource"></property>
     </bean>
 
-    &lt;!&ndash; 配置事务增强  &ndash;&gt;
+    <!-- 配置事务增强  -->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
-            &lt;!&ndash; 配置所有方法都是事务方法 &ndash;&gt;
+            <!-- 配置所有方法都是事务方法 -->
             <tx:method name="*"/>
             <tx:method name="get*" read-only="true"/>
         </tx:attributes>
     </tx:advice>
 
-    &lt;!&ndash; 开启基于注解的事务  &ndash;&gt;
+    <!-- 开启基于注解的事务  -->
     <aop:config>
-        &lt;!&ndash; 切入点表达式 &ndash;&gt;
+        <!-- 切入点表达式 -->
         <aop:pointcut expression="execution(* com.xiayuhu.ssm.Library_Management_System.service.impl.*.*(..))" id="txPoint"/>
-        &lt;!&ndash; 配置事务增强 &ndash;&gt;
+        <!-- 配置事务增强 -->
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPoint"/>
-    </aop:config>-->
+    </aop:config>
 </beans>
 
 
