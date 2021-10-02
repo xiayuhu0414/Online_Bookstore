@@ -22,7 +22,7 @@ public class UserController {
     public ModelAndView test(){
         List<User> list = userService.listUser();
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("index");
+        modelAndView.setViewName("WEB-INF/view/Home/index");
         modelAndView.addObject("list", list);
         return modelAndView;
     }
