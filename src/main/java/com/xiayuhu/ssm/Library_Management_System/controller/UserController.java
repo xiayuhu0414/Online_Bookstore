@@ -20,7 +20,7 @@ public class UserController {
      */
     @RequestMapping(value="/selectUser")
     public ModelAndView test(){
-        List<User> list = userService.listUser();
+        List<User> list = userService.find();
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("WEB-INF/view/Home/index");
         modelAndView.addObject("list", list);
