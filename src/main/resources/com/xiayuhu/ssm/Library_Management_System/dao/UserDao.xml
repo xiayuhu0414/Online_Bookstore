@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiayuhu.ssm.Library_Management_System.dao.UserDao">
+    <resultMap type="User" id="userMap">
+        <id property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="userPass" column="user_pass"/>
+        <result property="userNickname" column="user_nickname"/>
+        <result property="userEmail" column="user_email"/>
+        <result property="userRole" column="user_role"/>
+    </resultMap>
+    <select id="find" resultMap="userMap">
+        select * from user
+    </select>
+</mapper>
+
