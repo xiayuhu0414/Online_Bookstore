@@ -1,7 +1,7 @@
-package com.xiayuhu.ssm.Library_Management_System;
+package com.xiayuhu.ssm.Online_Bookstore;
 
-import com.xiayuhu.ssm.Library_Management_System.entity.User;
-import com.xiayuhu.ssm.Library_Management_System.dao.UserDao;
+import com.xiayuhu.ssm.Online_Bookstore.entity.User;
+import com.xiayuhu.ssm.Online_Bookstore.dao.UserDao;
 
 import org.junit.Test;
 import org.slf4j.Logger;

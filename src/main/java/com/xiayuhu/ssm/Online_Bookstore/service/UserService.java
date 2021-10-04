@@ -1,9 +1,11 @@
-package com.xiayuhu.ssm.Library_Management_System.service;
+package com.xiayuhu.ssm.Online_Bookstore.service;
 
-import com.xiayuhu.ssm.Library_Management_System.entity.User;
+import com.xiayuhu.ssm.Online_Bookstore.entity.User;
 
 import java.util.List;
 
 public interface UserService {
-    public List<User> find();
+    List<User> find();
+
+    User getUserById(Integer id);
 }

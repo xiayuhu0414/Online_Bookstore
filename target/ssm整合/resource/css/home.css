@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    color: rgb(255, 255, 255);
+}
+header img{
+    margin-left: 1em;
+    vertical-align: middle;
+    height: 100px;
+       
+}
+.biaoti{
+    
+    
+margin-top: -90px;
+  margin-right: 200px;
+ float: right;
+  
+    
+}
+
+.time{
+    height: 20px;
+    
+}
+.jing{
+    height: 20px;
+}
+.jingjiang{
+   width: 350px;
+  height: 65px;
+  margin-left: -10px;
+  margin-top: -04px;
+   
+    
+}
+.book{
+    margin-right: 10px;
+    float: right;
+    
+}
+.shouye{
+    margin-right: 800px;
+    margin-top: -40px;
+    float: right;
+    font-size: 20px;
+    opacity: 1;
+
+}
+.shouye{
+    margin-right: 400px;
+    opacity: 1;
+}
+header p{
+display: inline-block;
+font-size: 25px;
+
+}
+header{
+
+background-color: rebeccapurple;
+}
+section>div{
+    background-color: rebeccapurple;
+}
+.body{
+    width: 1536px;
+    height: 662px;
+    background: url("../../WEB-INF/web/img/home/beijing2.jpg") no-repeat;
+    background-size: 1536px 662px;
+    margin: 0px auto;
+}
+.body form{
+    width:600px;
+    height:250px;
+    float: right;
+    margin-top: 8em;
+    margin-right: 27em;
+    padding: 20px;
+    
+    background-color:rgba(0,0,0, 0.5);
+    
+}
+form div{
+    opacity: 1;
+}
+.first>p:first-of-type{
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.first>p:last-of-type{
+    float: right;
+    margin-right: 260px;
+    font-size: 20px;
+
+}
+.chao:hover{
+background-color: sandybrown;
+}
+.guan:hover{
+    background-color: sandybrown;
+    }
+.bai:hover{
+        background-color: sandybrown;
+        }
+.submenu :hover{
+    background-color: sandybrown
+}
+.second{
+    margin-top: -170px;
+    margin-left: 15px;
+}
+.second>span:hover{
+ font-weight: bolder;
+}
+
+
+.wenzi{
+    float: inherit;
+    margin-top: 60px;
+    margin-left: 15px;
+}
+.bai{
+    font-size: 20px;
+    margin-right: 260px;
+    margin-top: -218px;
+    float: right;
+}
+.guan{
+    font-size: 20px;
+    margin-right: 380px;
+    margin-top: -218px;
+    float: right;
+}
+.caozuolan{
+    float: inherit;
+    margin-top: 40px;
+}
+.kuang{
+    height: 35px;
+    margin-top: 30px;
+    width: 240px;
+    padding-left: 150px;
+    margin-left: 9px;
+    border-radius: 7px;
+}
+.anniu{
+    height:36px;
+    width: 80px;
+    background-color: sandybrown;
+   
+    border-radius: 7px;
+
+}
+.weixin{
+    background-color: rebeccapurple;
+    float: right;
+    margin-right: -1070px;
+    margin-top: 80px;
+   
+}
+.weibo{
+    background-color: rebeccapurple;
+    float: right;
+    margin-right: -1070px;
+    margin-top: 155px;
+}
+.shouji{
+    background-color: rebeccapurple;
+    float: right;
+    margin-right: -1070px;
+    margin-top: 230px;
+    
+}
+.dianhua{
+    background-color: rebeccapurple;
+    float: right;
+    margin-right: -1070px;
+    margin-top: 305px;
+}
+.sanjiao{
+    height: 20px;     
+}
+.nav>li{
+display: inline-block;/*让标签横排显示*/
+}
+.submenu{
+    display: none;
+}
+.nav{
+    float: right;
+    margin-top: -40px;
+    margin-right: 250px;
+}
+.nav>li>a:link{
+    text-decoration: none;/*超链接去下划线*/
+}
+.nav>li>a:visited{
+    color: white;/*超链接访问颜色*/
+}
+.nav a:link{
+    text-decoration: none;
+}
+.nav a:visited{
+    color: white;
+}
+.nav>li:hover ul{/*下拉菜单的设计*/
+    display: block;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+}
+.s{
+    background-color: rebeccapurple;
+    height: 35px;
+    float: inherit;
+    margin-top: 1px;
+   margin-left: -32px;
+
+}
+.s1{
+    background-color: rebeccapurple;
+    height: 35px;
+    float: inherit;
+    margin-top: 17px;
+   margin-left: -32px;
+}
+.weixin:hover span{
+    display: block;
+    list-style: none;
+    padding: 0px;
+    position: inherit;
+    
+}
+.weibo:hover span{
+    display: block;
+    list-style: none;
+    padding: 0px;
+    position: inherit;
+    
+}
+.dianhua:hover span{
+    display: block;
+    list-style: none;
+    padding: 0px;
+    position: inherit;
+    
+}
+.shouji:hover span{
+    display: block;
+    list-style: none;
+    padding: 0px;
+    position: inherit;
+    
+}
+.weixin1{
+    float: left;
+    width: 100px;
+    display: none;
+}
+
+.erweima3{
+    float: inherit;
+    margin-top: 3px;
+
+}
+
+.chao:hover div{
+    display: block;
+    list-style: none;
+    padding: 0px;
+    position: inherit;
+}
+.wo{
+    margin-right: 20px;
+    float: right;
+
+}
+.gerenzhongxin{
+    float: right;
+    margin-top: -28px;
+    margin-right: 28px;
+}

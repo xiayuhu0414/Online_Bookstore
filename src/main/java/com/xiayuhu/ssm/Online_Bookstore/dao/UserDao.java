@@ -1,7 +1,7 @@
-package com.xiayuhu.ssm.Library_Management_System.dao;
+package com.xiayuhu.ssm.Online_Bookstore.dao;
 
-import com.xiayuhu.ssm.Library_Management_System.entity.User;
-
+import com.xiayuhu.ssm.Online_Bookstore.entity.User;
+import org.apache.ibatis.annotations.Param;
 
 
 import java.util.List;
@@ -9,5 +9,7 @@ import java.util.List;
 public interface UserDao {
 
  public List<User> find();
+
+ public User getUserById(@Param("id")  Integer id);
 
 }

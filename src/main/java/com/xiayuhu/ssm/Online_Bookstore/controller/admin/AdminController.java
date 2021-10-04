@@ -1,4 +1,4 @@
-package com.xiayuhu.ssm.Library_Management_System.controller.admin;
+package com.xiayuhu.ssm.Online_Bookstore.controller.admin;
 
 public class AdminController {
 }

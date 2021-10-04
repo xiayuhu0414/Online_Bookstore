@@ -1,0 +1,65 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>用户注册</title>
+    <link rel="stylesheet" type="text/CSS" href="./css/registered.css">
+    <script>
+        function check2pwd() {
+            if(mm.value != qrmm.value) {
+                alert("两次输入密码不一致！")
+                mm.value = "";
+                qrmm.value = "";
+            }
+        }
+        function check(form){
+//检查姓名是否填写
+            var username = form.xm.value;
+            if(username.length==0){
+                alert("请填写用户名！");
+                form.username.focus();
+                return false;
+            }
+            var id = form.id.value;
+            if(id.length==0){
+                alert("请填写学号！");
+                form.id.focus();
+                return false;
+            }
+            var nu = form.nu.value;
+            if(nu.length==0){
+                alert("请填写手机号！");
+                form.nu.focus();
+                return false;
+            }
+            var mm = form.mm.value;
+            if(mm.length==0){
+                alert("请填写密码！");
+                form.mm.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="reServlet" method="get" onSubmit="return check(this);" name="login">
+    <div class="s">
+    </div>
+    <div class="zw">
+        <div>
+            <h2>注册</h2>
+            <input class="zn" type="text" name="id" id="xh" placeholder="账户"></input><br>
+            <input class="zn" type="text" name="xm" id="yhm" placeholder="用户名"><br>
+            <input class="zn" type="text" name="nu" id="sjhm" placeholder="手机号码"><br>
+            <input class="zn" type="password" name="mm" id="mm" value=""  placeholder="密码"><br>
+            <input class="zn" type="password" name="qrmm" id="qrmm" value=""  placeholder="确认密码" onblur="check2pwd()"><br>
+            <span id="tishi"></span>
+        </div>
+        <input type="submit" id="zc" value="立即注册"><br>
+
+        <div class="zx">
+            <a href="index.jsp">返回登录界面</a>
+        </div>
+    </div>
+</form>
+</body>
+</html>
