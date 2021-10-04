@@ -1,5 +1,5 @@
-# Library_Management_System
-Library_Management_System
+# Online_Bookstore
+Online_Bookstore
 
 ###### 解决maven项目mapper接口和映射文件不在同一目录的问题。 
 

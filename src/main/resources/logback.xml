@@ -3,7 +3,7 @@
 
     <contextName>logback</contextName>
 
-    <property name="log.path" value="Library_Management_System\logs\logback.log"/>
+    <property name="log.path" value="Online_Bookstore\logs\logback.log"/>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <!-- <filter class="com.example.logback.filter.MyFilter" /> -->

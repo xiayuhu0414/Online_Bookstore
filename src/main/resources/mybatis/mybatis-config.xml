@@ -10,7 +10,7 @@
     </settings>
     <typeAliases>
         <!-- 指定一个包名，MyBatis会在包名下搜索需要的JavaBean-->
-        <package name="com.xiayuhu.ssm.Library_Management_System.entity"/>
+        <package name="com.xiayuhu.ssm.Online_Bookstore.entity"/>
     </typeAliases>
 
 </configuration>
