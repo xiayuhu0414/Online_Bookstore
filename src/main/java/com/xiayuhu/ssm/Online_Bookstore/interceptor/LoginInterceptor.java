@@ -19,11 +19,12 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) {
-       //这里可以根据session的用户来判断角色的权限，根据权限来转发不同的页面
+      /* //这里可以根据session的用户来判断角色的权限，根据权限来转发不同的页面
         if (httpServletRequest.getSession().getAttribute("user") == null) {
             modelAndView.setViewName("index");
+            System.out.println("被我拦截啦");
         }
-        modelAndView.setViewName("index");
+        modelAndView.setViewName("index");*/
     }
 
     @Override

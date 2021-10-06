@@ -24,10 +24,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /*  */
+
     /**
      * 查找所有学生
+     *
      * @return
-     */
+     *//*
     @RequestMapping(value="/selectUser")
     public ModelAndView test(){
         List<User> list = userService.find();
@@ -36,14 +39,14 @@ public class UserController {
         modelAndView.addObject("list", list);
         return modelAndView;
     }
-
+*/
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = {"text/plain;charset=UTF-8"})
     public String login(HttpServletRequest request, HttpServletResponse response) {
         Map<String, Object> map = new HashMap<String, Object>();
 
         String id = request.getParameter("id");
         Integer i = null;
-        if(id!=null){
+        if (id != null) {
             i = Integer.valueOf(id);
         }
         String password = request.getParameter("password");
@@ -60,28 +63,37 @@ public class UserController {
             map.put("msg", "");
             //添加session
             request.getSession().setAttribute("user", user);
-/*
-            //添加cookie
-            if (rememberme != null) {
-                //创建两个Cookie对象
-                Cookie nameCookie = new Cookie("username", username);
-                //设置Cookie的有效期为3天
-                nameCookie.setMaxAge(60 * 60 * 24 * 3);
-                Cookie pwdCookie = new Cookie("password", password);
-                pwdCookie.setMaxAge(60 * 60 * 24 * 3);
-                response.addCookie(nameCookie);
-                response.addCookie(pwdCookie);
-            }
-            user.setUserLastLoginTime(new Date());
-            user.setUserLastLoginIp(getIpAddr(request));
-            userService.updateUser(user);
-*/
-
         }
         String result = new JSONObject(map).toString();
         System.out.println(result);
         return result;
     }
+
+
+    @RequestMapping("/register")
+    public String register() {
+        return "register";
+    }
+
+    @RequestMapping(value = "/registerSubmit", method = RequestMethod.POST)
+    public String registerPage(HttpServletRequest request) {
+        String username = request.getParameter("xm");
+        String password = request.getParameter("mm");
+        String email = request.getParameter("em");
+        String gender = request.getParameter("gen");
+        String phone = request.getParameter("nu");
+        // 添加用户
+        User user = new User();
+        user.setUserName(username);
+        user.setUserPass(password);
+        user.setUserPhone(phone);
+        user.setUserEmail(email);
+        user.setUserGender(gender);
+        user.setUserRole("1");
+        userService.insertUser(user);
+        return "index";
+    }
+
     /**
      * 登录页面显示
      *
@@ -93,15 +105,7 @@ public class UserController {
     }
 
 
-    *//**
-     * 登录页面显示
-     *
-     * @return
-     *//*
-    @RequestMapping("/register")
-    public String registerPage() {
-        return "Admin/register";
-    }
+
 
     *//**
      * 登录验证

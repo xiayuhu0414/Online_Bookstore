@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel ="stylesheet" type="text/CSS" href="../../resource/css/index.css">
+
+</head>
+<body>
+<script></script>
+<form th:action="@{/login}" method="post">
+    <div class="div1">
+        <h2>
+            网上书城
+        </h2>
+        <input type="text" id="xh" placeholder="账户" name="id">
+        <br>
+        <input type="password" id="mm" placeholder="密码" name="password">
+        <br>
+        <input type="submit" id="dl" value="登录">
+        <br>
+        <p >
+            <a  th:href="@{/register}">注 册</a>
+        </p>
+    </div>
+
+</form>
+</body>
+</html>
