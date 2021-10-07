@@ -3,4 +3,5 @@ E:\huhu\IdeaProjects\Online_Bookstore\src\main\java\com\xiayuhu\ssm\Online_Books
 E:\huhu\IdeaProjects\Online_Bookstore\src\main\java\com\xiayuhu\ssm\Online_Bookstore\dao\UserDao.java
 E:\huhu\IdeaProjects\Online_Bookstore\src\main\java\com\xiayuhu\ssm\Online_Bookstore\entity\User.java
 E:\huhu\IdeaProjects\Online_Bookstore\src\main\java\com\xiayuhu\ssm\Online_Bookstore\service\impl\UserServiceImpl.java
+E:\huhu\IdeaProjects\Online_Bookstore\src\main\java\com\xiayuhu\ssm\Online_Bookstore\interceptor\LoginInterceptor.java
 E:\huhu\IdeaProjects\Online_Bookstore\src\main\java\com\xiayuhu\ssm\Online_Bookstore\service\UserService.java

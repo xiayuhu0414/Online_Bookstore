@@ -35,7 +35,7 @@
    path：设置处理的请求地址
    view-name：设置请求地址所对应的视图名称
    -->
-    <mvc:view-controller path="/" view-name="index"></mvc:view-controller>
+    <mvc:view-controller path="/" view-name="login"></mvc:view-controller>
     <!-- 启用 SpringMVC 注解驱动 -->
     <mvc:annotation-driven />
 <!--    开放对静态资源的访问-->

@@ -23,5 +23,36 @@
         values(#{userName},#{userPass},#{userEmail},#{userPhone},
         #{userGender},#{userRole})
     </select>
+
+    <update id="update" parameterType="User">
+        update user
+        <set>
+            <if test="userName != null">user_name = #{userName},</if>
+            <if test="userPass != null">user_pass = #{userPass},</if>
+            <if test="userPhone != null">user_phone = #{userPhone},</if>
+            <if test="userGender != null">user_gender = #{userGender},</if>
+            <if test="userEmail != null">user_email = #{userEmail},</if>
+            <if test="userRole != null">user_role = #{userRole},</if>
+            <if test="userAddress != null">user_address = #{userAddress},</if>
+        </set>
+        where user_id = #{userId}
+    </update>
+    <sql id="Base_Column_List">
+    user_id, user_name, user_pass, user_email, user_phone,
+   user_gender, user_role,user_address
+  </sql>
+    <select id="listUser" parameterType="User"
+            resultType="userMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        user
+        ORDER BY `user_id` ASC
+    </select>
+    <delete id="deleteById" parameterType="Integer">
+        delete from
+        user
+        where user_id = #{userId}
+    </delete>
 </mapper>
 

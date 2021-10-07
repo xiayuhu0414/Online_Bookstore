@@ -1,6 +1,7 @@
 com\xiayuhu\ssm\Online_Bookstore\dao\UserDao.class
-com\xiayuhu\ssm\Online_Bookstore\service\impl\UserServiceImpl.class
-com\xiayuhu\ssm\Online_Bookstore\entity\User.class
 com\xiayuhu\ssm\Online_Bookstore\service\UserService.class
 com\xiayuhu\ssm\Online_Bookstore\controller\UserController.class
 com\xiayuhu\ssm\Online_Bookstore\controller\admin\AdminController.class
+com\xiayuhu\ssm\Online_Bookstore\service\impl\UserServiceImpl.class
+com\xiayuhu\ssm\Online_Bookstore\entity\User.class
+com\xiayuhu\ssm\Online_Bookstore\interceptor\LoginInterceptor.class

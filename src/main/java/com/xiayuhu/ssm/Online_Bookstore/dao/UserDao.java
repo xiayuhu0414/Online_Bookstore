@@ -8,14 +8,16 @@ import java.util.List;
 
 public interface UserDao {
 
- public List<User> find();
+    List<User> listUser();
+
+    int deleteById(Integer userId);
     /**
      * 根据ID查询
      *
      * @param id 用户ID
      * @return 用户
      */
- public User getUserById(@Param("id")  Integer id);
+    User getUserById(@Param("id") Integer id);
 
     /**
      * 更新
@@ -23,7 +25,8 @@ public interface UserDao {
      * @param user 用户
      * @return 影响行数
      */
-    int update(User user);
+    void update(User user);
+
     /**
      * 添加
      *

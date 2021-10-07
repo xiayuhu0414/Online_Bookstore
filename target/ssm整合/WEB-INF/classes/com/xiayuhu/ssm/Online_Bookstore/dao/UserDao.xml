@@ -13,12 +13,15 @@
         <result property="userRole" column="user_role"/>
         <result property="userAddress" column="user_address"/>
     </resultMap>
-    <select id="find" resultMap="userMap">
-        select * from user
-    </select>
-
     <select id="getUserById" resultMap="userMap">
         select * from user where user_id=#{id}
+    </select>
+
+    <select id="insert" parameterType="User" resultMap="userMap">
+        insert into user (user_name,user_pass,user_email,
+        user_phone,user_gender,user_role)
+        values(#{userName},#{userPass},#{userEmail},#{userPhone},
+        #{userGender},#{userRole})
     </select>
 </mapper>
 
