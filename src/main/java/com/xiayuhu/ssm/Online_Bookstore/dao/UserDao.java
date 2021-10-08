@@ -7,7 +7,13 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface UserDao {
-
+    /**
+    * @description:  用户列表
+    * @param:  
+    * @return: java.util.List<com.xiayuhu.ssm.Online_Bookstore.entity.User>
+    * @author xyh
+    * @date: 2021/10/8 8:04
+    */ 
     List<User> listUser();
 
     int deleteById(Integer userId);
