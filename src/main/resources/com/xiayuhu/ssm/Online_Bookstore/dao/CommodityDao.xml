@@ -3,9 +3,48 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xiayuhu.ssm.Online_Bookstore.dao.CommodityDao">
-
-    <select id="" resultType="">
-
+    <sql id="Base_Column_List">
+    serialNumber, title, author, introduction, sort,
+   price, isbn,amount,cover,status
+  </sql>
+    <select id="listCommodity" resultType="Commodity">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        commodity
+    </select>
+    <select id="listCommodityBySort" resultType="Commodity">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        commodity
+        WHERE 'sort'=#{sort}
+    </select>
+    <select id="getCommodityByIsbn" resultType="Commodity">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        commodity
+        WHERE 'isbn'=#{isbn}
+    </select>
+    <select id="getCommodityByAuthor" resultType="Commodity">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        commodity
+        WHERE 'author'=#{author}
+    </select>
+    <select id="getCommodityByTitle" resultType="Commodity">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        commodity
+        WHERE 'title'=#{title}
+    </select>
+    <select id="addCommodity" parameterType="Commodity" >
+        insert into user (<include refid="Base_Column_List"/>)
+        values(#{serialNumber},#{title},#{author},#{introduction},
+        #{sort},#{price},#{isbn},#{amount},#{cover},#{status})
     </select>
 
 </mapper>
