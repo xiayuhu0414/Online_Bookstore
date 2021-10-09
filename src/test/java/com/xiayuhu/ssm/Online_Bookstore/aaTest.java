@@ -14,15 +14,7 @@ import java.util.List;
 public class aaTest {
 
 
-    @Test
-    public void select( ) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-mybatis.xml");
-        UserDao userDao =  context.getBean(UserDao.class);
 
-        List<User> user = userDao.find();
-        System.out.println(user);
-
-    }
 
     Logger logger=  LoggerFactory.getLogger(aaTest.class);
 

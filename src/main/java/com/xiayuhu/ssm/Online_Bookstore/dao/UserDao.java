@@ -31,7 +31,7 @@ public interface UserDao {
      * @param user 用户
      * @return 影响行数
      */
-    void update(User user);
+    int updata(User user);
 
     /**
      * 添加
@@ -39,5 +39,8 @@ public interface UserDao {
      * @param user 用户
      * @return 影响行数
      */
-    void insert(User user);
+    int insert(User user);
+
+
+
 }

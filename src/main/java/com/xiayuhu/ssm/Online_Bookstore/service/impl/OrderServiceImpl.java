@@ -1,5 +1,6 @@
 package com.xiayuhu.ssm.Online_Bookstore.service.impl;
 
+import com.xiayuhu.ssm.Online_Bookstore.service.OrderService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -8,5 +9,5 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class OrderServiceImpl {
+public class OrderServiceImpl implements OrderService {
 }

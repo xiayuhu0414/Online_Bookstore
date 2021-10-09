@@ -16,8 +16,17 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
+    /**
+    * @description: 用户列表
+    * @param:
+    * @return: java.util.List<com.xiayuhu.ssm.Online_Bookstore.entity.User>
+    * @author xyh
+    * @date: 2021/10/9 8:50
+    */
     public List<User> listUser() {
-        return null;
+        List<User> userList = userDao.listUser();
+        // 使用查询到的用户列表，可以完成一些预加载
+        return userList;
     }
 
     @Override
@@ -27,7 +36,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void updateUser(User user) {
-          //userDao.updata(user);
+          userDao.updata(user);
     }
 
     @Override
